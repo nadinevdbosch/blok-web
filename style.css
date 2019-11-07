@@ -153,7 +153,7 @@ nav>a:hover{
 
 
 #home{
-    background-image: url(images/background-image.jpg);
+    background-image: url(image/background-image.jpg);
 /*    * bron "https://www.freepik.com/free-photos-vectors/background">Background vector created by starline - www.freepik.com*/
     width: 100vw;
     height: 100vh;
@@ -324,7 +324,7 @@ footer section{
 }
 
 #portfolio {
-    background-image: url(images/background-image.jpg);
+    background-image: url(image/background-image.jpg);
     background-attachment: fixed;
 }
 
@@ -357,37 +357,37 @@ footer section{
 
 
 #portfolio main section a:nth-child(1) {
-    background-image: url(images/portfolio/holyguacamole.png);
+    background-image: url(image/portfolio/holyguacamole.png);
     background-size: cover;
     background-position: center;
 }
 
 #portfolio main section a:nth-child(2) {
-    background-image: url(images/portfolio/fietsservicweeserpleinp.png);
+    background-image: url(image/portfolio/fietsservicweeserpleinp.png);
     background-size: cover;
     background-position: center;
 }
 
 #portfolio main section a:nth-child(3) {
-    background-image: url(images/portfolio/ontwerpgeschiedenis.JPG);
+    background-image: url(image/portfolio/ontwerpgeschiedenis.JPG);
     background-size: cover;
     background-position: center;
 }
 
 #portfolio main section a:nth-child(4) {
-    background-image: url(images/portfolio/spinactivity.png);
+    background-image: url(image/portfolio/spinactivity.png);
     background-size: cover;
     background-position: center;
 }
 
 #portfolio main section a:nth-child(5) {
-    background-image: url(images/portfolio/Screen%20Shot%202019-10-31%20at%2011.58.04.png);
+    background-image: url(image/portfolio/Screen%20Shot%202019-10-31%20at%2011.58.04.png);
     background-size: cover;
     background-position: center;
 }
 
 #portfolio main section a:nth-child(6) {
-    background-image: url(images/portfolio/Screen%20Shot%202019-10-31%20at%2012.04.03.png);
+    background-image: url(image/portfolio/Screen%20Shot%202019-10-31%20at%2012.04.03.png);
     background-size: cover;
     background-position: center;
 }
@@ -395,7 +395,7 @@ footer section{
 
 
 #contact {
-    background-image: url(images/background-image.jpg);
+    background-image: url(image/background-image.jpg);
     background-attachment: fixed;
 }
 
