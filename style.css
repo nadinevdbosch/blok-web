@@ -1,69 +1,476 @@
-* {
-    padding: 0;
+*{
     margin: 0;
+    padding: 0;
+    font-family: Fresca;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif, arial;
-    background-color: lightgray;
+body{
+    overflow-x: hidden;
+    }
+
+html {
+    scroll-behavior: smooth;
 }
+
+/*bron scrollen: https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-behavior*/
+
+
 
 header{
     display: flex;
     width: 100vw;
-    background-color: orange;
+    max-height: 100px;
+    background-color: #072543;
 }
 
-ul{
+
+#logo{
+    height: 80px;
+    padding:10px;
+    animation-name: logoZoom;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+}
+
+@keyframes logoZoom {
+   from { height: 80px }
+   to   { height: 85px; }
+}
+
+#letterN, #Npart {
+    fill: white;
+    animation-name: verschijnenN;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction: alternate;
+    animation-iteration-count: 2;
+    
+}
+
+#letterD {
+    fill: #D2A3AA;
+    animation-delay: 2s;
+    animation-name: verschijnenD;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-direction:alternate;
+    animation-iteration-count: 2;
+    
+}
+
+@keyframes verschijnenN {
+    from {fill: white;}
+  to {fill: #D2A3AA;}
+}
+
+@keyframes verschijnenD {
+    from {fill: #D2A3AA;}
+  to {fill: white;}
+}
+
+/*bron van werking van keyframes: https://www.youtube.com/watch?v=f1WMjDx4snI*/
+
+header ul{
     width: 86vw;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
     list-style-type: none;
+    align-items: center;
+    height: 100%;
+    
+}
+
+
+
+header li a {
+    text-decoration: none;
+    color: white;
+    padding-right: 40px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 1.2em;
+    border-bottom: 4px solid #D2A3AA;
+    transition: all .3s ease-in;
+}
+
+/*lijntjes onder de navigatie verschillende kleuren geven*/
+li:nth-child(1) a {
+    border-color: #D2A3AA;
+    margin-right: 25px;
+}
+li:nth-child(2) a {
+    border-color: #A04D83;
+    margin-right: 25px;
+}
+li:nth-child(3) a {
+    border-color: #683551;
+    margin-right: 25px;
+    
+}
+
+/*wanneer je hoovert komt de lijn omhoog*/
+li:nth-child(1) a:hover {
+    border: 5px solid #D2A3AA;
+}
+li:nth-child(2) a:hover {
+    border: 5px solid #A04D83;       
+}
+li:nth-child(3) a:hover {
+    border: 5px solid #683551;
+}
+
+/*wanneer je er op klikt en de knop geheel ingekleurd wordt*/
+li:nth-child(1) a:active {
+    background-color: #D2A3AA ;
+}
+li:nth-child(2) 
+    a:active {
+    background-color: #A04D83 ;
+        
+}
+li:nth-child(3) a:active {
+    background-color: #683551 ;
+}
+
+
+nav>a {
+    position: absolute;
+    right: 0px;
+    top 0px;
+    margin: 30px;
+    width: 50px;
+    display: none;
+    fill: white;
+    
+}
+
+nav>a:hover{
+    fill: #D2A3AA;
+}
+
+
+#home{
+    background-image: url(images/background-image.jpg);
+/*    * bron "https://www.freepik.com/free-photos-vectors/background">Background vector created by starline - www.freepik.com*/
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+#tekstvlak{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+    bottom: 40%;
+    width: 100vw;
+    height: 20%;
+    background-color: rgba(210,163,170,0.5);
+    
+    
+}
+
+
+#arrow{
+    width: 3em;
+    position: absolute;
+    top: 86vh;
+    right: 48vw;
+    left: 48vw;
+    right: calc(50% - 1.5em);
+    left: calc(50% - 1.5em);
+}
+
+
+body>a:hover{
+    fill: #D2A3AA; 
+}
+ 
+#portret{
+    grid-column: 1;
+    margin-left: 25px;
+    width: 25vw;
+    border-radius: 50%;
+}
+
+article{
+    grid-column: 2;
+}
+
+h1{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #072543;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#tekstvlak{
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+
+#tekstvlak p {
+    font-size: 4vw;
+    color: #072543;
+    
+}
+
+#tekstvlak p:hover{
+    text-shadow: 1px 2px #683551,
+                 2px 2px white,
+                 3px 2px #A04D83;
+    
+    font-size: 5vw;
+    
+    transition: all .3s ease-in;
+    
+}
+
+p {
+    line-height: 1.4em;
+}
+
+main #overmij {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+main section p {
+    grid-column: 2;
+    font-size: 1.5em;
+    color: #072543;
+}
+
+#skills h1{
+    text-align: center;
+    padding: 20px;
+    color: #072543;
+}
+
+
+main #skills{
+    background-color: rgba(210,163,170,0.5); 
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+main #logos{
+    display: flex;
     justify-content: space-around;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#logos img{
+    width: 7vw;
+    max-width: 90px;
+    min-width: 50px;
+    margin-bottom: 70px;
+    
+}
+
+#logos img:hover{
+    transition: all 1s ease-in;
+    transform: rotateY(360deg);
+    
+}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: #072543;   
+}
+
+footer ul{
+    width: 100vw;
+    display: flex;
+    justify-content:space-around;
+    list-style-type: none;
     align-items: center;
     height: 100%;
 }
 
-a {
+footer li a {
     text-decoration: none;
-}
-
-li {
-    font-size: 2vw;
     color: white;
+    padding-right: 40px;
+    padding-left: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 1.2em;
+    border-bottom: 4px solid #D2A3AA;
+    transition: all .3s ease-in;
 }
 
-li a {
-    color: white;
+footer section{
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(210,163,170,0.5);
+    
 }
 
-.logo{
-    border-radius: 50%;
-    width: 10vw;
-    padding: 3px;
+#portfolio {
+    background-image: url(images/background-image.jpg);
+    background-attachment: fixed;
 }
 
-main h1 {
-    margin-left: 2vw;
-    margin-top: 2vw;
+#portfolio h1{
+    display: flex;
+    justify-content: center;
+    margin: 1em;
 }
 
-main h2 {
-    margin-left: 2vw;
+#portfolio main section{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100vw;
+    
 }
 
-main h3 {
-    margin-left: 2vw;
+#portfolio main section a article {
+    width: 30vw;
+    min-width: 300px;
+    height: 20vw;
+    border: 0.2em solid #072543;
+    
+ 
 }
 
-main p {
-    margin-left: 2vw;
+#portfolio main section a {
+    margin: 1em 0 1em 0;
 }
 
-.tussenstand{
-    width: 25vw;
-    border-radius: 5%;
-    margin-left: 2vw;
+
+#portfolio main section a:nth-child(1) {
+    background-image: url(images/portfolio/holyguacamole.png);
+    background-size: cover;
+    background-position: center;
 }
+
+#portfolio main section a:nth-child(2) {
+    background-image: url(images/portfolio/fietsservicweeserpleinp.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio main section a:nth-child(3) {
+    background-image: url(images/portfolio/ontwerpgeschiedenis.JPG);
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio main section a:nth-child(4) {
+    background-image: url(images/portfolio/spinactivity.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio main section a:nth-child(5) {
+    background-image: url(images/portfolio/Screen%20Shot%202019-10-31%20at%2011.58.04.png);
+    background-size: cover;
+    background-position: center;
+}
+
+#portfolio main section a:nth-child(6) {
+    background-image: url(images/portfolio/Screen%20Shot%202019-10-31%20at%2012.04.03.png);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+#contact {
+    background-image: url(images/background-image.jpg);
+    background-attachment: fixed;
+}
+
+/*Style contact formulier*/
+legend{
+    font-size: 1.2em;
+    padding: 1.6em;
+}
+
+fieldset {
+    font-size: 1em;
+    border-radius: 20px;
+    border-style:outset;
+    border-width: 10px;
+    border-color: #D2A3AA;
+    width: 50%;
+    margin: 30px auto;
+    text-align: left;
+    padding: 20px;
+}
+
+input, textarea{
+    margin-bottom: 20px;
+    width: 150px;
+    transition: all .3s ease-in;
+}
+
+input.textarea {
+    width: 200px;
+/*    height: 100px;*/
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    
+}
+
+input:valid{
+    border: 1px solid yellowgreen;
+}
+
+input:focus{
+    width: 200px;
+}
+
+
+input:invalid{
+    border: 1px solid #D2A3AA;
+}
+
+.textarea:focus{
+    width: 250px;
+}
+
+
+
+
+
+input:last-of-type{
+    font-size: 1em;
+    padding: 5px;
+    background-color: #D2A3AA;
+    border: none;
+}
+
+fieldset:valid{
+    border-color: yellowgreen;
+    
+}
+
+#sorteer{
+    position: absolute;
+    margin-left: 90vw;
+    margin-top: -2em;
+    
+}
+
+
+
+

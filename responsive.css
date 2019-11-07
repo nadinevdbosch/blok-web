@@ -1,0 +1,198 @@
+@media (max-width: 574px) { 
+
+
+/*hamburgermenu tevoorschijn laten komen*/
+    nav>a {
+        display: block;
+    }
+/*positie van de navigatie veranderen*/
+header ul{
+    position: absolute;
+    right: 0px;
+    height: 300px;
+    top: 100px;
+    background-color: #D2A3AA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+/* BRON: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX*/
+    z-index: 1;
+    transition: transform .3s ease-in;
+}
+
+
+.active {
+    transform: translateX(0%);
+    
+    }
+    
+.hidden{
+    display: none;
+    
+    }
+
+
+
+
+    
+
+/*kleur van het lijntje "over mij" veranderen naar blauw*/
+header li:nth-child(1) a {
+    border-color: #072543;
+
+}
+    
+header li:nth-child(1) a:hover {
+    border: none;
+    border-bottom: 5px solid #072543;
+    padding-right: 100px;
+    padding-left: 100px
+}
+    
+header li:nth-child(1) a:active {
+    background-color: #072543 ;
+}
+    
+/*alleen een lijntje eronder ipv border en extra padding*/
+header li:nth-child(2) a:hover {
+    border:none;
+    border-bottom: 5px solid #A04D83; 
+    padding-right: 100px;
+    padding-left: 100px
+}
+header li:nth-child(3) a:hover {
+    border: none;
+    border-bottom: 5px solid #683551;
+    padding-right: 100px;
+    padding-left: 100px
+}
+    
+/*margin aan de rechterkant weghalen*/
+header li:nth-child(1) a {
+    margin-right: 0px;
+}
+header li:nth-child(2) a {
+    margin-right: 0px;
+}
+header li:nth-child(3) a {
+    margin-right: 0px;
+    
+}
+    
+header li a {
+    text-decoration: none;
+    color: white;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 1.2em;
+    border-bottom: 4px solid #D2A3AA;
+    transition: all .3s ease-in;
+}
+    
+    
+/*Tekstvlak welkom bij nadine design aanpassen*/
+#tekstvlak{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 30%;
+    bottom: 30%;
+    width: 100vw;
+    height: 40%;
+    background-color: rgba(210,163,170,0.5);
+}
+
+#tekstvlak p {
+    font-size: 10.2vw;
+    text-align: center;  
+}
+    
+#tekstvlak p:hover{
+     font-size: 11vw;
+}
+
+    
+/*margin in de footer weghalen*/
+footer li:nth-child(1) a {
+    margin-right: 0px;
+}
+footer li:nth-child(2) a {
+    margin-right: 0px;
+}
+footer li:nth-child(3) a {
+    margin-right: 0px;    
+}
+
+footer li a {
+    text-decoration: none;
+    color: white;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    font-size: 1.2em;
+    border-bottom: 4px solid #D2A3AA;
+    transition: all .3s ease-in;
+}
+
+#portret{
+    display: flex;
+    margin: auto;
+    width: 70vw;
+    justify-content: center;
+}
+
+main #overmij {
+    display: block;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+    
+#overmij article {
+    margin-top: 25px;
+        
+    }
+
+
+    
+/*skills logo's vergroten*/
+main #logos{
+    width: 100%;
+}
+
+/*contactformulier*/
+fieldset {
+    width: 75%;
+    
+}
+    
+}
+
+@media (max-width: 1000px) { 
+
+#portfolio main section a article {
+    width: 45vw;
+    height: 30vw;
+    border: 0.2em solid #072543;
+}
+}
+
+@media (max-width: 640px) { 
+    #portfolio main section a article {
+    width: 80vw;
+    height: 50vw;
+    border: 0.2em solid #072543;
+    }
+}
+
+    
